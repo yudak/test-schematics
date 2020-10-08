@@ -1,0 +1,34 @@
+{
+  "name": "@yudak/yk-tools",
+  "version": "0.1.7",
+  "peerDependencies": {
+    "@angular/common": "^10.1.4",
+    "@angular/core": "^10.1.4"
+  },
+  "dependencies": {
+    "tslib": "^2.0.0"
+  },
+  "scripts": {
+    "ng": "ng",
+    "start": "ng serve",
+    "build": "ng build",
+    "test": "ng test",
+    "lint": "ng lint",
+    "build:prod": "npm run build --prod",
+    "publish:patch": " npm version patch && npm run build:prod && cd ..\\..\\..\\dist\\ykit\\yk-tools && npm publish --ignore-scripts --access public",
+    "prepublishOnly": "node --eval \"console.error('ERROR: Trying to publish a package that has been compiled by Ivy. This is not allowed.\\nPlease delete and rebuild the package, without compiling with Ivy, before attempting to publish.\\n')\" && exit 1"
+  },
+  "main": "bundles/ykit-yk-tools.umd.js",
+  "module": "fesm2015/ykit-yk-tools.js",
+  "es2015": "fesm2015/ykit-yk-tools.js",
+  "esm2015": "esm2015/ykit-yk-tools.js",
+  "fesm2015": "fesm2015/ykit-yk-tools.js",
+  "typings": "ykit-yk-tools.d.ts",
+  "sideEffects": false,
+  "description": "This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.4.",
+  "directories": {
+    "lib": "lib"
+  },
+  "author": "Yuda Klein",
+  "license": "MIT"
+}

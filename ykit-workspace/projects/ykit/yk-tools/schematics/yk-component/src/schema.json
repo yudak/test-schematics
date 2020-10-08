@@ -1,0 +1,21 @@
+{
+    "$schema": "http://json-schema.org/schema",
+    "id": "YudaSchematicTest",
+    "title": "Yuda Schematic Options Schema",
+    "type": "object",
+    "description": "Creates a new generic YudaSchematicTest definition in the given or default project.",
+    "properties": {
+        "name": {
+            "type": "string",
+            "description": "The name of the component.",
+            "$default": {
+                "$source": "argv",
+                "index": 0
+            }
+        }
+    },
+    "required": [
+        "name"
+    ]
+}
+      

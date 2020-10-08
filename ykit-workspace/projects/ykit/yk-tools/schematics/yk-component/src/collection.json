@@ -1,0 +1,10 @@
+{
+  "$schema": "../node_modules/@angular-devkit/schematics/collection-schema.json",
+  "schematics": {
+    "yk-component": {
+      "description": "A blank schematic.",
+      "factory": "./yk-component/index#ykComponent",
+      "schema": "./schema.json"
+    }
+  }
+}

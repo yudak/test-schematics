@@ -1,0 +1,29 @@
+{
+  "name": "@yudak/yk-component",
+  "version": "0.0.4",
+  "description": "A blank schematics",
+  "scripts": {
+    "build": "tsc -p tsconfig.json && npm run schematics:build:copy && npm run schematics:build:copy2",
+    "schematics:build:copy": "cpx ./src/**/{package.json,collection.json,schema.json,files/**} ../../../../../dist/ykit/yk-tools/schematics/yk-component",
+    "schematics:build:copy2": "cpx ./package.json ../../../../dist/ykit/yk-tools/schematics/yk-component",
+    "test": "npm run build && jasmine src/**/*_spec.js",
+    "publish": "cd ../../../../../dist/ykit/yk-tools/schematics/yk-component && npm publish --access=public"
+  },
+  "keywords": [
+    "schematics"
+  ],
+  "author": "",
+  "license": "MIT",
+  "schematics": "./src/collection.json",
+  "dependencies": {
+    "@angular-devkit/core": "^10.1.4",
+    "@angular-devkit/schematics": "^10.1.4",
+    "@yudak/yk-component": "^0.0.1",
+    "typescript": "~4.0.2"
+  },
+  "devDependencies": {
+    "@types/node": "^12.11.1",
+    "@types/jasmine": "~3.5.0",
+    "jasmine": "^3.5.0"
+  }
+}
